@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Mobile: 375px;
+--Desktop: 1440px;
+  --Red: hsl(0, 100%, 74%); 
+--Green: hsl(154, 59%, 51%);
+--Blue: hsl(248, 32%, 49%);
+--Dark-Blue: hsl(249, 10%, 26%);
+--Grayish-Blue: hsl(246, 25%, 77%);
+--Font-size: 16px;
+--Family: Poppins, sans-serif;
+}
+
+html, body{
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: var(--Family);
+  font-weight: 400;
+}
