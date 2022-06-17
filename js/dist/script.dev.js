@@ -10,9 +10,10 @@ var validateForm = function validateForm(e) {
   var firstName = document.getElementById('fname');
   var lastName = document.getElementById('lname');
   var emailAdd = document.getElementById('email');
-  var password = document.getElementById('psw'); //check if required input fields are properly filled
+  var password = document.getElementById('psw');
+  var letters = /^[A-Za-z]+$/; //check if required input fields are properly filled
 
-  if (firstName.value === "") {
+  if (firstName.value === "" || !firstName.value.match(letters)) {
     //first name
     var tip = document.getElementById('fnameTip');
     var error = document.getElementById('fnameError');
@@ -22,7 +23,7 @@ var validateForm = function validateForm(e) {
     error.style.visibility = 'visible';
   }
 
-  if (lastName.value === "") {
+  if (lastName.value === "" || !lastName.value.match(letters)) {
     //Last name
     var _tip = document.getElementById('lnameTip');
 
@@ -34,7 +35,7 @@ var validateForm = function validateForm(e) {
     _error.style.visibility = 'visible';
   }
 
-  if (emailAdd.value === "") {
+  if (emailAdd.value === "" || !emailAdd.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
     //email
     var _tip2 = document.getElementById('emailTip');
 
@@ -48,7 +49,7 @@ var validateForm = function validateForm(e) {
     _error2.style.visibility = 'visible';
   }
 
-  if (password.value === "" || password.value.length <= 6) {
+  if (password.value === "") {
     //password
     var _tip3 = document.getElementById('pswTip');
 
