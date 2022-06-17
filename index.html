@@ -21,11 +21,27 @@
             </div>
             <div class="form-wrapper">
                 <button><b>Try it free 7 days</b> then $20/mo. thereafter</button>
-                <form class="form" action="" novalidate>
-                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
-                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
-                    <input type="email" id="email" name="email" placeholder="Email Address" required>
-                    <input type="password" id="psw" name="psw" placeholder="Password" required>
+                <form class="form" action="">
+                    <div class="form-control">
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                        <span id="fnameError" class="error-icon"><img src="./images/icon-error.svg" alt="error"></span>
+                        <p id="fnameTip" class="input-tip">First Name cannot be empty</p>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                        <span id="lnameError" class="error-icon"><img src="./images/icon-error.svg" alt="error"></span>
+                        <p id="lnameTip" class="input-tip">Last Name cannot be empty</p>
+                    </div>
+                    <div class="form-control">
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        <span id="emailError" class="error-icon"><img src="./images/icon-error.svg" alt="error"></span>
+                        <p id="emailTip" class="input-tip">Looks like this is not an email</p>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" id="psw" name="psw" placeholder="Password" required>
+                        <span id="pswError" class="error-icon"><img src="./images/icon-error.svg" alt="error"></span>
+                        <p id="pswTip" class="input-tip">Password cannot be empty</p>
+                    </div>
                     <input type="submit" id="submitBtn" name="submitbtn" value="CLAIM YOUR FREE TRIAL">
                     <p>By clicking this button you are agreeing to our <a href="">Terms and Services</a></p>
                 </form>
